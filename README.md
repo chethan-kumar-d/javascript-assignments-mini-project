@@ -1,47 +1,71 @@
 # JavaScript Assignments & Mini Project
 
-Six practical JavaScript assignments and the **Interactive Product Inventory & Analytics Dashboard**, prepared for Chethan Kumar D.
+Six practical JavaScript assignments and an interactive Product Inventory & Analytics mini project.
 
-## Run in a browser
+## Technologies
 
-Download this repository using **Code → Download ZIP**, extract it, and open `index.html` in Chrome, Edge, or Firefox. Choose an exercise and open **Developer Tools → Console** (Windows: F12 or Ctrl+Shift+J). Reload its page to repeat. No installation, API key, or internet connection is required after download. GitHub's file viewer displays source; it does not execute HTML or JavaScript.
+HTML and JavaScript.
 
-Assignments 2 and 3 and the mini project use browser `prompt()`, so running them directly in Node.js will not work without a prompt substitute.
+## Assignments
 
-## Files and concepts
+1. Variables, data types, typeof and console output
+2. Operators, user input and number conversion
+3. Conditions using if/else, switch and ternary operators
+4. Loops using for, while and do/while, including break and continue
+5. Functions, arrow functions, default parameters and scope
+6. Objects, arrays, forEach, filter and map
 
-| File | Concepts |
-| --- | --- |
-| `assignments/01-variables.js` | var, let, const, data types, typeof, console |
-| `assignments/02-operators.js` | prompt, Number conversion, arithmetic, +=, formatted output |
-| `assignments/03-conditions.js` | if/else, switch, ternary |
-| `assignments/04-loops.js` | for, while, do/while, break, continue |
-| `assignments/05-functions.js` | standard/arrow functions, defaults, function/block scope |
-| `assignments/06-arrays.js` | objects, arrays, forEach, filter, map |
-| `project/inventory.js` | integrated inventory application and analytics |
+## Mini Project
 
-Each JavaScript file has a matching HTML launcher.
+The Product Inventory & Analytics application demonstrates:
 
-## Sample inputs and output
+- Adding a product through browser prompts
+- Validating product names and prices
+- Checking for duplicate product names
+- Categorising products as Budget, Standard or Premium
+- Finding affordable products
+- Calculating inventory totals, discounts and tax
+- Displaying results in the browser console
 
-- Assignment 1: Alice, age 25, employed true, skills HTML/CSS/JavaScript.
-- Assignment 2: enter `100` and `15` → tip $15 and total $115.
-- Assignment 3: enter `85` → grade B, Passed. Grades: A ≥90, B ≥80, C ≥70, D ≥60, F <60; pass threshold 60.
-- Assignment 4: table of 5 up to 5, first number above 10 divisible by 6 is 12; additional odd-number output demonstrates continue.
-- Assignment 5: areas 20 and 30. Deliberate out-of-scope accesses are caught and printed; they do not crash the script. Browser wording for ReferenceError may vary.
-- Assignment 6: Laptop $800, Mouse $25, Keyboard $45; items below $50 are Mouse and Keyboard. Console array display varies by browser.
-- Project: enter `Monitor` and `150` → Laptop Premium, Mouse Budget, Monitor Standard; total $975; affordable items Mouse and Monitor. A further example applies 10% discount followed by 5% tax → $921.38.
+The inventory starts with a Laptop ($800) and Mouse ($25).
 
-## Project behavior
+Inventory data is stored in memory and resets when the page reloads.
 
-Preloaded products are Laptop ($800) and Mouse ($25). One valid product is added per run. Blank names, duplicate names (case insensitive), blank prices, nonnumeric/negative/infinite prices are rejected. Invalid entry repeats the prompts; Cancel stops entry and still reports the existing inventory. Zero price is accepted. Inventory lives in memory and resets on reload.
+## Run Locally
 
-Category thresholds: Budget < $50; Standard $50 to below $500; Premium ≥ $500. Affordable means strictly below $200. Thresholds are local to `runInventory()` and can be adjusted there. Standard functions calculate totals and categories; an arrow function accepts custom tax and discount percentages with defaults and local variables. The project demonstrates searching with break, validation with continue, and forEach/filter/map reporting.
+1. Click Code → Download ZIP in this repository.
+2. Extract the downloaded ZIP.
+3. Open index.html in Chrome, Edge or Firefox.
+4. Choose an assignment or the mini project.
+5. Open Developer Tools → Console to view the results.
+6. Reload the selected page to run it again.
+
+On Windows, open Developer Tools using F12 or Ctrl + Shift + I.
+
+No installation or API key is required to run the browser version.
+
+Some exercises use browser prompt() dialogs. Run them in a browser; running these files directly in Node.js requires a replacement for prompt().
+
+GitHub's repository file viewer displays the source code. It does not run the application.
+
+## Project Structure
+
+- assignments/ — JavaScript assignment files
+- project/inventory.js — Inventory mini project
+- index.html — Main entry page
+- verify.js — Automated verification script
+- README.md — Project documentation
 
 ## Verification
 
-Run `node verify.cjs` to verify sample outputs, boundary grades, invalid inputs, cancellation, and project totals. Tests provide simulated prompts; normal usage remains in the browser.
+If Node.js is installed, run:
 
-## Submission
+    node verify.js
 
-Submit the repository URL requested by your instructor by **16 October 2026**. A private repository requires reviewer access; a link alone does not grant access. Follow your instructor's visibility requirements before submitting.
+The verification script checks sample outputs, grade boundaries, invalid inputs, cancellation and inventory calculations using simulated prompts.
+
+## Author
+
+Chethan Kumar D
+
+[GitHub Profile](https://github.com/chethan-kumar-d)
